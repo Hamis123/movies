@@ -1,5 +1,6 @@
 import MovieFetcher from '../hook';
 import MovieCard from './movieCard';
+import { Link } from 'react-router-dom';
 
 export default function Popular({ searchTerm }) {
   const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
@@ -22,8 +23,9 @@ export default function Popular({ searchTerm }) {
               <div className="flex flex-row flex-wrap justify-center gap-3 pt-5">
                 {filteredMovies.length > 0 ? (
                   filteredMovies.map(movie => (
-                    <MovieCard key={movie.id} movie={movie} />
-                  ))
+                  <Link to={`/details/${movie.id}`}>
+                  <MovieCard key={movie.id} movie={movie} />
+                  </Link>                  ))
                 ) : (
                   <p className="text-white">No movies found.</p>
                 )}

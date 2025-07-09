@@ -1,4 +1,5 @@
 import MovieFetcher from '../hook';
+import { Link } from 'react-router-dom';
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -23,11 +24,13 @@ export default function TopRatedMovies() {
                 {topMovies.map((movie, index) => (
                   <div key={movie.id} className="top-movie-card">
                     <span className="movie-rank">{index + 1}</span>
+                  <Link to={`/details/${movie.id}`}>
                     <img
                       src={IMG_BASE_URL + movie.poster_path}
                       alt={movie.title}
                       className="top-movie-poster w-full h-auto rounded relative z-10"
                     />
+                    </Link>
                   </div>
                 ))}
               </div>

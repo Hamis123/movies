@@ -1,5 +1,6 @@
 import MovieFetcher from '../hook';
 import MovieCard from './movieCard';
+import { Link } from 'react-router-dom';
 
 export default function AllMovies({ searchTerm = '' }) {
   const url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc';
@@ -21,7 +22,9 @@ export default function AllMovies({ searchTerm = '' }) {
             ) : (
               <div className="flex flex-row flex-wrap justify-center gap-3 pt-5">
                 {filteredMovies.map(movie => (
+                  <Link to={`/details/${movie.id}`}>
                   <MovieCard key={movie.id} movie={movie} />
+                  </Link>
                 ))}
               </div>
             )}

@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Search from './components/search';
-import Popular from './components/popular';
-import TopRatedMovies from './components/trending';
-import AllMovies from './components/allMovies';
-import Header from './components/header';
-import Footer from './components/footer';
+import Search from '../components/search';
+import Popular from '../components/popular';
+import TopRatedMovies from '../components/trending';
+import AllMovies from '../components/allMovies';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
