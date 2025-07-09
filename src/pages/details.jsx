@@ -62,7 +62,7 @@ function MovieDetails() {
   );
 
   return (
-  <div className="min-h-screen bg-gray-900 flex items-start justify-center py-16 px-4">
+  <div className="min-h-screen  flex items-start justify-center py-16 px-4">
   <div className="max-w-4xl w-full mx-auto px-4">
         <div className="bg-gray-800 shadow-2xl overflow-hidden p-8 sm:p-12 m-4  space-y-8">
 
