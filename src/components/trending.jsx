@@ -10,7 +10,7 @@ export default function TopRatedMovies() {
     <MovieFetcher url={url}>
       {({ movieList, isLoading, errorMessage }) => {
         const sortedMovies = [...movieList].sort((a, b) => b.vote_average - a.vote_average);
-        const topMovies = sortedMovies.slice(0, 6);
+        const topMovies = sortedMovies.slice(0, 5);
 
         return (
           <section className="top-rated-section px-4 sm:px-6 lg:px-8 min-h-[400px] md:min-h-[600px] mb-8 md:mb-16 flex flex-col">
